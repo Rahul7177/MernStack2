@@ -8,35 +8,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script>
-        
-        function validateForm() {
-            var form = document.getElementById("myForm");
-            
-            var inputs = form.getElementsByTagName("input");
-           
-            for (var i = 0; i < inputs.length; i++) {
-                var input = inputs[i];
-                if (input.value == "") {
-                    input.classList.add("is-invalid");
-                    var errorMessage = input.nextElementSibling;
-                    errorMessage.style.display = "block";
-                    errorMessage.style.color = "red";
-                }
-            }
-            return false;
-        }
-    </script>
 
+</head>
+<body>
     <style>
         .invalid-feedback {
             font-size: 12px;
             font-weight: lighter;
             text-align: right;
         }
-    </style>
-</head>
-<body>
+    </style>
     <div class="container">
 
         <form id="myForm" onsubmit="return validateForm()">
@@ -119,6 +100,27 @@
             <button type="submit" class="btn btn-primary">Send</button>
         </form>
     </div>
+
+  
+    <script>
+        
+        function validateForm() {
+            var form = document.getElementById("myForm");
+            
+            var inputs = form.getElementsByTagName("input");
+           
+            for (var i = 0; i < inputs.length; i++) {
+                var input = inputs[i];
+                if (input.value == "") {
+                    input.classList.add("is-invalid");
+                    var errorMessage = input.nextElementSibling;
+                    errorMessage.style.display = "block";
+                    errorMessage.style.color = "red";
+                }
+            }
+            return false;
+        }
+    </script>
 </body>
 </html>
 
